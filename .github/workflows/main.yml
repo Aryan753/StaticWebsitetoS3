@@ -1,9 +1,11 @@
+
 name: Upload Website
 
 on:
   push:
     branches:
     - main
+    
 
 jobs:
   deploy:
