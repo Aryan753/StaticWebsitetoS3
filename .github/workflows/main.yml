@@ -18,8 +18,8 @@ jobs:
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-west-1'   # Optional: defaults to us-east-1
-        SOURCE_DIR: 'website'     # Adjust if your files are in a different directory
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}  # Ensure this secret is set in your repo
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Ensure this secret is set in your repo
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Ensure this secret is set in your repo
+        AWS_REGION: 'us-west-1'  # Optional: defaults to us-east-1, adjust to match your bucket's region
+        SOURCE_DIR: 'website'  # Adjust if your files are in a different directory
